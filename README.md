@@ -1,13 +1,12 @@
-# New Project
-
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+# Template for Svelte + Typescript with Snowpack
 
 ## Available Scripts
 
 ### npm start
 
 Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+Open http://localhost:3400 to view it in the browser.
+--port is configured in snowpack.config.js
 
 The page will reload if you make edits.
 You will also see any lint errors in the console.
