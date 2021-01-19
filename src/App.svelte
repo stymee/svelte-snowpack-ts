@@ -1,10 +1,16 @@
 <script lang="typescript">
-    import {Route} from 'tinro';
+    import {Router, Route} from 'svelte-routing';
     import dayjs from 'dayjs';
     import {onMount} from 'svelte';
+    import Nav from './components/Nav.svelte';
+    import Test1 from './components/Test1.svelte';
+    import Home from './components/Home.svelte';
 
     let count: number = 0;
     let nowTime: string = '';
+    const url: string = '';
+    const basepath: string = '';
+
     onMount(() => {
         const interval = setInterval(() => {
             count++;
@@ -16,26 +22,26 @@
     });
 </script>
 
-<div class="App">
-    <header class="App-header">
-        <img src="/logo.svg" class="App-logo" alt="logo" />
-        <p>Edit <code>src/App.svelte</code> and save to reload.</p>
-        <p>Page has been open for <code>{count}</code> seconds.</p>
-        <p>
-            <a
-                class="App-link"
-                href="https://svelte.dev"
-                target="_blank"
-                rel="noopener noreferrer"> Learn Svelte 12345 </a>
-        </p>
-        <Route path="/test">
-            <h4>Test! {nowTime}</h4>
-        </Route>
-        <Route path="/test2">
-            <h4>Test2! {nowTime}</h4>
-        </Route>
-    </header>
-</div>
+<Router {url} {basepath}>
+    <div class="App">
+        <Nav />
+        <header class="App-header">
+            <img src="/logo.svg" class="App-logo" alt="logo" />
+            <p>Edit <code>src/App.svelte</code> and save to reload.</p>
+            <p>Page has been open for <code>{count}</code> seconds.</p>
+            <p>
+                <a
+                    class="App-link"
+                    href="https://svelte.dev"
+                    target="_blank"
+                    rel="noopener noreferrer"> Learn Svelte 12345 </a>
+            </p>
+
+            <Route path="test" component={Test1} />
+            <Route path="/" component={Home} />
+        </header>
+    </div>
+</Router>
 
 <style>
     :global(body) {
