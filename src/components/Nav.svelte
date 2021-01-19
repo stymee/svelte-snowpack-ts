@@ -3,6 +3,6 @@
 </script>
 
 <nav>
-    <a href="/" use:link>Home a</a>
+    <a href="./" use:link>Home a</a>
     <a href="test" use:link>Test</a>
 </nav>

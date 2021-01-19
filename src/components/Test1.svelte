@@ -7,7 +7,7 @@
     let nowTime: string = '';
 
     onMount(() => {
-        //console.log('Home location', location);
+        console.log('Home location', location);
         const interval = setInterval(() => {
             nowTime = dayjs(Date.now()).format('ddd M/D/YY h:mm:ss.SSS a');
         }, 10);

@@ -21,6 +21,7 @@ module.exports = {
     /* ... */
   },
   buildOptions: {
+    baseUrl: '/snowpack/'
     /* ... */
   },
 };

@@ -9,7 +9,8 @@
     let count: number = 0;
     let nowTime: string = '';
     const url: string = '';
-    const basepath: string = '';
+    //const basepath: string = '/snowpack';
+    const basepath: string = '/';
 
     onMount(() => {
         const interval = setInterval(() => {
@@ -26,7 +27,7 @@
     <div class="App">
         <Nav />
         <header class="App-header">
-            <img src="/logo.svg" class="App-logo" alt="logo" />
+            <img src="logo.svg" class="App-logo" alt="logo" />
             <p>Edit <code>src/App.svelte</code> and save to reload.</p>
             <p>Page has been open for <code>{count}</code> seconds.</p>
             <p>
